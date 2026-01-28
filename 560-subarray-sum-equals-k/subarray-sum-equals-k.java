@@ -4,11 +4,10 @@ class Solution {
         int sum = 0;
 
         Map<Integer, Integer> map = new HashMap<>();
-        map.put(0, 1); // important
 
         for (int num : nums) {
             sum += num;
-
+            if(sum == k) count++;
             if (map.containsKey(sum - k)) {
                 count += map.get(sum - k);
             }
