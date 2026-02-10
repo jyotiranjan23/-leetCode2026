@@ -28,7 +28,7 @@ class Solution {
         }
     }
     public void reverse(int[] arr, int i, int j){
-        while(i <= j){
+        while(i < j){
             int temp = arr[i];
             arr[i] = arr[j];
             arr[j] = temp;
