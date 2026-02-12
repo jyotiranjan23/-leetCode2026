@@ -1,11 +1,13 @@
 class Solution {
     public int longestConsecutive(int[] nums) {
+        //create a set
         Set<Integer> set = new HashSet<>();
         int maxCount = 0;
-        // add all elements to set
-        for(int n:nums){
+        //copy all the elements from the array into the set.
+        for(int n: nums){
             set.add(n);
         }
+        //traverse the set and try to create consecutive elements 
         for(int n: set){
             if(!set.contains(n-1)){
                 int count = 1;
