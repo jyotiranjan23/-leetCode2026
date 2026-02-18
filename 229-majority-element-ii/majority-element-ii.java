@@ -5,10 +5,10 @@ class Solution {
         HashMap<Integer, Integer> map = new HashMap<>();
         for(int i=0; i<nums.length; i++){
             map.put(nums[i], map.getOrDefault(nums[i], 0)+1);
-            if(map.getOrDefault(nums[i], 0) > requiredFrequency){
-                if(!result.contains(nums[i])){
-                result.add(nums[i]);
-                }
+        }
+        for(Map.Entry<Integer, Integer> entry: map.entrySet()){
+            if(entry.getValue() > requiredFrequency){
+                result.add(entry.getKey());
             }
         }
         return result;
