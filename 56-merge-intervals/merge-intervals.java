@@ -16,15 +16,12 @@ class Solution {
 
                 
             }
-            if(i==intervals.length-1){
-                    result.add(List.of(start, end));
-                }
-
         }
+        result.add(List.of(start, end));
         int[][] resultArray = new int[result.size()][2];
         for(int i=0; i<result.size(); i++){
             resultArray[i][0] = result.get(i).get(0);
-            resultArray[i][1] = result.get(i).get(1);
+         resultArray[i][1] = result.get(i).get(1);
 
         }
         return resultArray;
