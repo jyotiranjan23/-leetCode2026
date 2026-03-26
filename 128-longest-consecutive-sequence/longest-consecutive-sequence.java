@@ -6,13 +6,16 @@ class Solution {
             set.add(n);
         }
         for(int n: set){
-            int count = 0;
+            if(!set.contains(n-1)){
+                int count = 0;
             int num = n;
-            while(set.contains(num) && !set.contains(n-1)){
+            while(set.contains(num)){
                 count ++;
                 num++;
             }
             maxCount = Math.max(maxCount, count);
+            }
+            
         }
         return maxCount;
     }
