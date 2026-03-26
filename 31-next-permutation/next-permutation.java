@@ -7,7 +7,6 @@ class Solution {
                 break;
             }
         }
-        System.out.println(pivot);
         if(pivot == -1){
             reverse(nums, 0, nums.length-1);
             return;
