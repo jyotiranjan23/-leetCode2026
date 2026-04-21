@@ -4,8 +4,8 @@ class Solution {
         int j=nums.length-1;
         while(i <= j){
             int mid = (i+j)/2;
-            if(i==j) return nums[i];
-            if(mid == 0) return nums[0];
+            //if(i==j) return nums[i];
+            if(mid == 0 || mid == nums.length-1) return nums[mid];
             if(nums[mid] != nums[mid-1] && nums[mid] != nums[mid+1]){
                 return nums[mid];
             }
