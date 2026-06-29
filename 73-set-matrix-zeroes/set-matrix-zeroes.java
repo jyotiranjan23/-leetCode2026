@@ -1,17 +1,20 @@
 class Solution {
     public void setZeroes(int[][] matrix) {
-        boolean firstRow = false;
-        boolean firstColumn = false;
-
-        for(int i=0; i<matrix[0].length; i++){
+        boolean rowContainsZero = false;
+        boolean columnContainsZero = false;
+        int m=matrix.length;
+        int n = matrix[0].length;
+        // check the first row contains 0 or not.
+        for(int i=0; i<n; i++){
             if(matrix[0][i] == 0){
-                firstRow = true;
+                rowContainsZero = true;
                 break;
-            } 
+            }
         }
-        for(int i=0; i<matrix.length; i++){
+        // check the first column contains 0 or not.
+        for(int i=0; i<m; i++){
             if(matrix[i][0] == 0){
-                firstColumn = true;
+                columnContainsZero = true;
                 break;
             }
         }
@@ -30,15 +33,15 @@ class Solution {
                 }
             }
         }
-        if(firstRow){
-            for(int i=0; i<matrix[0].length; i++){
-                matrix[0][i] = 0;
-            }
+        if(rowContainsZero){
+            for(int i=0; i<n; i++){
+            matrix[0][i] = 0;
         }
-        if(firstColumn){
-            for(int i=0; i<matrix.length; i++){
-                matrix[i][0] = 0;
-            }
+        }
+        if(columnContainsZero){
+            for(int i=0; i<m; i++){
+            matrix[i][0] = 0;
+        }
         }
     }
 }
