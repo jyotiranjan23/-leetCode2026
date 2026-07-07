@@ -7,11 +7,10 @@ class Solution {
                 j++;
             }
             else {
-                if(j != 0 && nums[j] != nums[j-1]){
                     i++;
                     nums[i] = nums[j];
                     j++;
-                }
+                
             }
 
         }
